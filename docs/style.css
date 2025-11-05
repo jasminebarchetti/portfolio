@@ -791,3 +791,62 @@ footer {
     color: #5C4E43;
     font-weight: bold;
 }
+/* ======================================= */
+/* MEDIA QUERY: Tablet (max-width: 768px)  */
+/* ======================================= */
+@media (max-width: 768px) {
+    
+    /* 1. Navigazione e Header */
+    .nav-right ul {
+        /* I link di navigazione potrebbero aver bisogno di più spazio */
+        padding: 0 10px;
+    }
+    
+    /* 2. Sezione Eroe (Hero) */
+    .hero-content h1 {
+        /* Riduci la dimensione del testo principale */
+        font-size: 3.5rem; 
+    }
+    
+    /* 3. Griglia Progetti */
+    .project-grid {
+        /* Trasforma la griglia da 3 a 2 colonne */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; 
+    }
+
+    /* 4. Contenitori Generali */
+    /* Riduci il padding o la larghezza massima dei contenitori se necessario */
+    .contact-container, .skills-container {
+        padding: 40px 20px;
+    }
+}/* ========================================= */
+/* MEDIA QUERY: Smartphone (max-width: 480px)*/
+/* ========================================= */
+@media (max-width: 480px) {
+    
+    /* 1. Header */
+    .nav-container {
+        /* Posiziona i link in una colonna se sono troppo stretti */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 2. Sezione Eroe */
+    .hero-content h1 {
+        /* Riduci ulteriormente la dimensione del testo per lo schermo piccolo */
+        font-size: 2rem; 
+    }
+
+    /* 3. Griglia Progetti */
+    .project-grid {
+        /* Rendi la griglia a colonna singola per una migliore leggibilità */
+        grid-template-columns: 1fr;
+    }
+
+    /* 4. Modulo Contatti */
+    .contact-form-wrapper {
+        /* Se hai delle righe nel modulo, mettile in colonna */
+        flex-direction: column;
+    }
+}
